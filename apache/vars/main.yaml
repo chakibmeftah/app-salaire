@@ -1,0 +1,6 @@
+---
+
+paquets:
+  - php
+  - php-mysql
+  - httpd

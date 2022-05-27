@@ -1,0 +1,13 @@
+---
+
+
+- name: "Installation MariaDB"
+  yum:
+   name: mariadb-server
+   state: present
+
+- name: "Redémarrage de Mariadb"
+  systemd:
+   name: mariadb
+   state: restarted
+   enabled: yes

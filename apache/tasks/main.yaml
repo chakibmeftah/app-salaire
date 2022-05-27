@@ -1,0 +1,31 @@
+---
+
+- name: "installation des paquets nécessaires"
+  yum:
+   name: "{{ item }}"
+   state: present
+  loop:
+   "{{ paquets }}"
+  
+- name: "Attribuer les droits au dossier /var/www/html"
+  file: 
+    path: /var/www/html
+    state: directory
+    mode: '0755'
+
+- name: "copie des fichiers DB"
+  copy:
+    src: db-data/
+    dest: /var/www/html/
+    force: yes
+
+- name: "copie du template php"
+  template:
+    src: "template-php.j2"
+    dest: /var/www/html/Database-Config.php
+
+- name: "Redémarrer httpd"
+  systemd:
+   name: httpd
+   state: restarted
+   enabled: yes

@@ -1,0 +1,7 @@
+---
+
+mysql_user: "root"
+mysql_password: "root123"
+mysql_dbname: "app-salaire"
+db_host: "app-salaire.chakib.com"
+webserver_host: "app-salaire.chakib.com"
