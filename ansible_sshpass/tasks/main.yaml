@@ -34,9 +34,9 @@
   shell:
     cmd: sshpass -p "'{{ item }}'" ssh-copy-id -o stricthostkeychecking=no {{ item }}@{{ item }} 
   loop:
-    - sshMdp
-    - sshUser
-    - desHost
+    - "{{ sshMdp }}"
+    - "{{ sshUser }}"
+    - "{{ desHost }}"
 
     # "{{ sshMdp|product(sshUser)|product(desHost)|list }}"
 
