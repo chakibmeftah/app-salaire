@@ -1,4 +1,3 @@
 ---
-
-vars_files:
-  - sites.yml
+sites:
+  - app-salaire.chakib.form
