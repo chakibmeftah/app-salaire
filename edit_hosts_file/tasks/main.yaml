@@ -2,7 +2,7 @@
 
 - name: "copie des fichiers DB"
   copy:
-    src: etc_hosts.j2
+    src: templates/etc_hosts.j2
     dest: /etc/hosts
     force: yes
   become: yes
