@@ -32,11 +32,9 @@
 
 - name: "connecting"
   shell:
-    cmd: sshpass -p "'{{ item }}'" ssh-copy-id -o stricthostkeychecking=no {{ item }}@{{ item }} 
+    cmd: sshpass -p "'{{ item }}'" ssh-copy-id -o stricthostkeychecking=no {{ item }}@192.168.59.150 
   loop:
-    - "{{ sshMdp }}"
-    - "{{ sshUser }}"
-    - "{{ desHost }}"
+    "{{ sshMdp|product(sshUser)|list }}"
 
     # "{{ sshMdp|product(sshUser)|product(desHost)|list }}"
 
