@@ -3,3 +3,6 @@
   roles:
     - mariadb
     - apache
+  hosts: localhost
+  roles:
+    - edit_hosts_file
