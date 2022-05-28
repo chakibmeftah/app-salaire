@@ -1,4 +1,23 @@
 ---
 
+- name: "Remove file (delete file)"
+  file:
+    path: /etc/hosts
+    state: absent
+
 - name: "/etc/hosts template test"
-  template: src=etc_hosts.j2 dest=/etc/hosts
+  template: 
+  src: etc_hosts.j2 
+  dest: /etc/hosts
+
+
+# - name: "copy test1 "
+#    fetch:
+#     src: /etc/resolv.conf
+#     dest: ./resolv.conf
+#     flat: true
+
+# - name : "copy test2"
+#    copy:
+#     src: ./resolv.conf
+#     dest: /etc/resolv.conf
