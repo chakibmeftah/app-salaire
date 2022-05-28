@@ -3,6 +3,6 @@
   roles:
     - mariadb
     - apache
-  hosts: localhost
+  hosts: {{ myHost }}
   roles:
     - edit_hosts_file

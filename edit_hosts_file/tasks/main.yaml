@@ -1,29 +1,8 @@
 ---
 
-
-
-
-
-- name: "Remove file (delete file)"
-  file:
+- name: "insérer le contenu dans le fichier hosts"
+  lineinfile:
     path: /etc/hosts
-    state: absent
-  become: yes
-
-- name: "/etc/hosts template test"
-  template: 
-    src: etc_hosts.j2 
-    dest: /etc/hosts
-  become: yes
-
-
-# - name: "copy test1 "
-#    fetch:
-#     src: /etc/resolv.conf
-#     dest: ./resolv.conf
-#     flat: true
-
-# - name : "copy test2"
-#    copy:
-#     src: ./resolv.conf
-#     dest: /etc/resolv.conf
+    line: 192.168.59.150 {{ item  }}
+  loop:
+    "{{ sites }}"
