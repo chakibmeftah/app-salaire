@@ -1,0 +1,21 @@
+---
+
+InstallPackages:
+  - epel-release
+  - ansible
+  - sshpass
+
+ssh_key_filename:
+  - id_rsa
+
+desHost: 
+  - 192.168.59.150
+  - 192.168.59.101
+
+sshUser:
+  - root
+
+sshMdp:
+  - vagrant
+
+

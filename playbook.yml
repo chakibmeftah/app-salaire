@@ -3,6 +3,11 @@
   roles:
     - mariadb
     - apache
+
   hosts: myHost
   roles:
     - edit_hosts_file
+  
+  hosts: sshHosts
+  roles:
+    - ansible_sshpass
