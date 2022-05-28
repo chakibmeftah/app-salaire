@@ -1,14 +1,25 @@
 ---
 
-- name: "Remove file (delete file)"
-  file:
-    path: /etc/hosts
-    state: absent
-
-- name: "/etc/hosts template test"
-  template: 
-    src: etc_hosts.j2 
+- name: "copie des fichiers DB"
+  copy:
+    src: etc_hosts.j2
     dest: /etc/hosts
+    force: yes
+  become: yes
+
+
+
+
+
+# - name: "Remove file (delete file)"
+#   file:
+#     path: /etc/hosts
+#     state: absent
+
+# - name: "/etc/hosts template test"
+#   template: 
+#     src: etc_hosts.j2 
+#     dest: /etc/hosts
 
 
 # - name: "copy test1 "
