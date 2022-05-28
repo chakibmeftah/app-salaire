@@ -33,6 +33,6 @@
 
 
 - name: "Command ssh copy-id"
-  command: sshpass -p "{{ sshMdp }}" ssh-copy-id -o stricthostkeychecking=no {{ sshUser }}@{{ desHost }}
+  command: sshpass -p "{{ item }}" ssh-copy-id -o stricthostkeychecking=no {{ item }}@{{ item }}
   loop:
-   "{{ sshMdp[1], sshUser[1], desHost[1] }}"
+   "{{ sshMdp, sshUser, desHost }}"
