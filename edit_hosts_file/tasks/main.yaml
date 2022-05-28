@@ -1,25 +1,20 @@
 ---
 
-- name: "copie des fichiers DB"
-  copy:
-    src: templates/etc_hosts.j2
-    dest: /etc/hosts
-    force: yes
+
+
+
+
+- name: "Remove file (delete file)"
+  file:
+    path: /etc/hosts
+    state: absent
   become: yes
 
-
-
-
-
-# - name: "Remove file (delete file)"
-#   file:
-#     path: /etc/hosts
-#     state: absent
-
-# - name: "/etc/hosts template test"
-#   template: 
-#     src: etc_hosts.j2 
-#     dest: /etc/hosts
+- name: "/etc/hosts template test"
+  template: 
+    src: etc_hosts.j2 
+    dest: /etc/hosts
+  become: yes
 
 
 # - name: "copy test1 "
