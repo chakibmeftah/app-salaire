@@ -1,0 +1,6 @@
+# roles/hosts/vars/main.yml
+---
+
+hosts_file: /etc/hosts
+
+host_file_backup: /etc/hosts.old
