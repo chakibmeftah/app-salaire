@@ -1,5 +1,5 @@
 ---
-
+become: yes
 - name: "insérer le contenu dans le fichier hosts"
   lineinfile:
     path: /etc/hosts
