@@ -3,3 +3,4 @@
 
 hosts_file: /etc/hosts
 
+host_file_backup: no
