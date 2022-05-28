@@ -4,6 +4,6 @@
   lineinfile:
     path: /etc/hosts
     line: "192.168.59.150 {{ item  }}"
-    become: yes
+  become: yes
   loop:
    "{{ sites }}"
