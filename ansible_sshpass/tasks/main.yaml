@@ -32,7 +32,7 @@
 
 
 
-- name: "Command ssh copy-id"
+- name: "ssh "
   shell: 'sshpass -p "{{ item.0 }}" ssh-copy-id -o stricthostkeychecking=no {{ item.1 }}@{{ item.2 }}'
   loop:
    "{{ sshMdp|product(sshUser)|product(desHost)|list }}"
