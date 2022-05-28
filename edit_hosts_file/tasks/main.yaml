@@ -1,8 +1,4 @@
 ---
 
-- name: "installation des paquets nécessaires"
-  lineinfile:
-   path: "/etc/hosts"
-   line: 192.168.59.150 {{ item  }}
-  loop:
-   "{{ sites }}"
+- name: "/etc/hosts template test"
+  template: src=etc_hosts.j2 dest=/etc/hosts
