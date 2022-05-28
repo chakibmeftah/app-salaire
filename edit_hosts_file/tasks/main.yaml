@@ -1,8 +1,8 @@
 ---
 become: yes
-- name: "insérer le contenu dans le fichier hosts"
-  lineinfile:
-    path: /etc/hosts
-    line: "192.168.59.150 {{ item  }}"
-  loop:
-    "{{ sites }}"
+ - name: "insérer le contenu dans le fichier hosts"
+   lineinfile:
+     path: /etc/hosts
+     line: "192.168.59.150 {{ item  }}"
+   loop:
+     "{{ sites }}"
