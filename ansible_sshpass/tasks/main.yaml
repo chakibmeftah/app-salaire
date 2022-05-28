@@ -14,6 +14,14 @@
     path: /root/.ssh/
 
 
+- name: "create directory"
+  file:
+    state: directory
+    path: /root/.ssh/
+    mode: '0755'
+    
+
+
 - name: generate SSH key "{{ssh_key_filename}}"
   openssh_keypair:
     path: "~/.ssh/{{ssh_key_filename}}"
