@@ -1,8 +1,6 @@
 
 - name: installation des packages
-  hosts: 
-    - 192.168.59.140
-    - 192.168.59.107
+  hosts: all
   roles:
     - mariadb
     - apache
