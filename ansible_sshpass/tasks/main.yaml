@@ -1,5 +1,6 @@
 ---
-
+vars_files:
+  - credentials_info.yml
   
 
 # - name: "Installation d'ansible"
