@@ -34,7 +34,7 @@
 - name: "connecting"
   shell:
     cmd: sshpass -p "{{ item.1 }}" ssh-copy-id -o stricthostkeychecking=no {{ item.2 }}@{{ item.3 }}
-  with_subelements: 
+  loop: 
     - "{{ sshpasscredentials }}"
     - sshMdp
     - sshUser
