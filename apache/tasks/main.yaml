@@ -1,30 +1,34 @@
 ---
 
-- name: "installation des paquets nécessaires"
+- name: "Installation des paquets nécessaires"
   yum:
    name: "{{ item }}"
    state: present
   loop:
    "{{ paquets }}"
   
+- name: "Changer le nom d'hôtes"
+  hostname:
+    name: "{{ hostname }}"
+
 - name: "Attribuer les droits au dossier /var/www/html"
   file: 
     path: /var/www/html
     state: directory
     mode: '0755'
 
-- name: "copie des fichiers DB"
+- name: "Copie des fichiers DB"
   copy:
     src: db-data/
     dest: /var/www/html/
     force: yes
 
-- name: "copie du template php"
+- name: "Copie du template php"
   template:
     src: "template-php.j2"
     dest: /var/www/html/Database-Config.php
 
-- name: "copie du template html"
+- name: "Copie du template html"
   template:
     src: "index.html.j2"
     dest: /var/www/html/index.html

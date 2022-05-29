@@ -4,14 +4,18 @@
 InstallPackages:
   - sshpass
 
+server1: 192.168.59.107 
+client1: 192.168.59.140
+
+
 
 # Donner un nom à la clé SSH à générer
 ssh_key_filename: id_rsa
 
 
 creds: 
-  - sshpass -p "client" ssh-copy-id -o stricthostkeychecking=no root@192.168.59.107
-  - sshpass -p "server" ssh-copy-id -o stricthostkeychecking=no root@192.168.59.140
+  - sshpass -p "client" ssh-copy-id -o stricthostkeychecking=no root@{{ client1 }}
+  - sshpass -p "server" ssh-copy-id -o stricthostkeychecking=no root@{{ server1 }}
 
 
 
