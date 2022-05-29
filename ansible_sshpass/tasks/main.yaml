@@ -33,5 +33,5 @@
 
 - name: "hello"
   shell: 
-    cmd: sshpass -p "{{ item.value }}" ssh-copy-id -o stricthostkeychecking=no {{ item.value }}@{{ item.value }}
+    cmd: sshpass -p "{{ item.sshMdp }}" ssh-copy-id -o stricthostkeychecking=no {{ item.sshUser }}@{{ item.destHost }}
   loop: "{{ creds }}"
