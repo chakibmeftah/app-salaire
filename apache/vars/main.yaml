@@ -1,5 +1,7 @@
 ---
 
+hostname: app-salaire.chakib.form
+
 paquets:
   - php
   - php-mysql

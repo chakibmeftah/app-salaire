@@ -7,6 +7,10 @@
   loop:
    "{{ paquets }}"
   
+- name: "Modifier le nom de la machine"
+  hostname:
+    name: "{{ hostname }}"
+
 - name: "Attribuer les droits au dossier /var/www/html"
   file: 
     path: /var/www/html
