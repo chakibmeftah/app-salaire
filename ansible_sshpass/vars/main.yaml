@@ -10,15 +10,17 @@ InstallPackages:
 ssh_key_filename: id_rsa
 
 
+password: 
+  sshMdp: "vagrant"
+  sshMdp: "vagrant"
+  
+username:
+  sshUser: "root"
+  sshUser: "root"
 
-
-credentials: 
-    sshMdp: vagrant
-    sshMdp: vagrant
-    sshUser: root
-    sshUser: root
-    destHost: 192.168.59.150
-    destHost: 192.168.59.101
+ip:
+  destHost: "192.168.59.150"
+  destHost: "192.168.59.101"
   
 
 
