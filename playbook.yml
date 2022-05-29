@@ -3,7 +3,6 @@
   roles:
     - ansible_sshpass
 
-- name: "installation et déploiement des rôles"
   hosts: all
   roles:
     - mariadb
