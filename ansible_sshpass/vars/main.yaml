@@ -15,22 +15,22 @@ ssh_key_filename: id_rsa
 
 credentials: 
   - name: "host1 password"
-  sshMdp: vagrant
+    sshMdp: vagrant
 
   - name: "host2 password"
-  sshMdp: vagrant
+    sshMdp: vagrant
 
   - name: "host1 username"
-  sshUser: root
+    sshUser: root
 
   - name: "host2 username"
-  sshUser: root
+    sshUser: root
 
   - name: "host1 ip address"
-  destHost: 192.168.59.150
-  
+    destHost: 192.168.59.150
+
   - name: "host2 ip address"
-  destHost: 192.168.59.101
+    destHost: 192.168.59.101
   
 
 
