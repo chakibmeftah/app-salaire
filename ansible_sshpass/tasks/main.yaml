@@ -30,11 +30,13 @@
     state: present
     force: yes
 
+
 - name: "connecting"
   shell:
-    cmd: sshpass -p "{{ sshMdp }}" ssh-copy-id -o stricthostkeychecking=no {{ sshUser }}@192.168.59.150 
-  # loop:
-  #   "{{ sshMdp|product(sshUser)|list }}"
+    cmd: sshpass -p "{{ item.pass }}" ssh-copy-id -o stricthostkeychecking=no {{ item.name }}@item.ip 
+  loop:
+    - { pass: "{{ sshMdp }}", name: "{{ sshUser }}", ip: "{{ destHosts }}" }
+
 
     # "{{ sshMdp|product(sshUser)|product(desHost)|list }}"
 

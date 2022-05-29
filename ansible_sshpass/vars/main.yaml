@@ -1,17 +1,34 @@
 ---
 
+# Nom des paquets à installer
 InstallPackages:
   - ansible
   - sshpass
 
+
+# Donner un nom à la clé SSH à générer
 ssh_key_filename: id_rsa
 
-desHost: 
-  - 192.168.59.150
-  - 192.168.59.101
-
-sshUser: root
-
-sshMdp: vagrant
 
 
+# les variables utilisées par sshpass pour se connecter aux hosts 
+
+destHosts:
+  ip:
+    192.168.59.150
+    192.168.59.101
+
+# sshUser: root
+
+# sshMdp: vagrant
+
+sshMdp:
+  pass:
+    vagrant
+    vagrant  
+
+
+sshUser:
+  name:
+    root
+    root
