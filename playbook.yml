@@ -9,6 +9,6 @@
   roles:
     - edit_hosts_file
   
-  hosts: localhost
+  hosts: myLocalHost
   roles:
     - ansible_sshpass
