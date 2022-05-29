@@ -1,12 +1,7 @@
 node{
-  stage('Setting the variables values') {
-    steps {
-         sh '''
-            #!/bin/bash
-            apk add ansible
-         '''
-    }
-}
+    sh "#!/bin/bash \n" + 
+       "echo \"Hello from \$SHELL\""
+
     stage('Clone') {
         checkout scm
     }
