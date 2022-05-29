@@ -1,9 +1,11 @@
 node{
-    sh "#!/bin/bash \n" + 
-       "echo \"Hello from \$SHELL\""
-
     stage('Clone') {
         checkout scm
+    }
+    stage('Installation ansible') {
+        steps {
+            sh 'apk add ansible'
+        }
     }
     stage('Ansible') {
       ansiblePlaybook (
