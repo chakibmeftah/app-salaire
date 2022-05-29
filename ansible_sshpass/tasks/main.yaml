@@ -33,11 +33,9 @@
 
 - name: "connecting"
   shell:
-    cmd: sshpass -p "{{ item.1 }}" ssh-copy-id -o stricthostkeychecking=no {{ item.2 }}@{{ item.3 }}
+    cmd: sshpass -p "{{ item.sshMdp }}" ssh-copy-id -o stricthostkeychecking=no {{ item.sshUser }}@{{ item.destHosts }}
   loop: 
     - "{{ sshpasscredentials }}"
-    - sshMdp
-    - sshUser
-    - destHosts
+
 
     # - {{ sshMdp }} , {{ sshUser }}, {{ desHost }}  
