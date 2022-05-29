@@ -31,7 +31,7 @@
 #     state: present
 #     force: yes
 
-- name: hello
+- name: "hello"
   shell: 
     cmd: sshpass -p "{{ item.key }}" ssh-copy-id -o stricthostkeychecking=no {{ item.key }}@{{ item.key }}
   loop: "{{ password }}, {{ username }}, {{ ip }}"
