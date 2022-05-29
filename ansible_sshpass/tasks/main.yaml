@@ -1,4 +1,8 @@
 ---
+vars:
+  vars_file:
+    main.yml
+  
 
 # - name: "Installation d'ansible"
 #   apk:
