@@ -19,6 +19,9 @@ creds:
   - sshpass -p "vagrant" ssh-copy-id -o stricthostkeychecking=no root@192.168.59.150
 
 
+
+srvHost: 192.168.59.140
+
 # creds: 
 #   sshMdp: vagrant
 #   sshMdp: vagrant

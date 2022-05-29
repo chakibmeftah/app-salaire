@@ -36,3 +36,10 @@
     cmd: "{{ item }}"
   loop: 
     "{{ creds }}"
+
+
+- hosts: "{{ srvHost }}""
+
+- name: "Set a hostname"
+  hostname:
+    name: "{{ hostname }}"
