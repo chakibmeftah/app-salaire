@@ -4,8 +4,5 @@
   roles:
     - mariadb
     - apache
-
-  hosts: myHost
-  roles:
     - edit_hosts_file
   
