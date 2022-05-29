@@ -1,6 +1,6 @@
 
 - name: installation des packages
-  hosts: server
+  hosts: all
   roles:
     - mariadb
     - apache
