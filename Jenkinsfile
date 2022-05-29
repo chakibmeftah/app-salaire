@@ -10,4 +10,12 @@ node{
           inventory: 'hosts.yml'
       )
     }
+    stage('Ansible') {
+      ansiblePlaybook (
+          colorized: true, 
+          become: true,             
+          playbook: 'playbook2.yml',
+          inventory: 'hosts.yml'
+      )
+    }
 }
