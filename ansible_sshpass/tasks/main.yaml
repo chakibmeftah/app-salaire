@@ -1,34 +1,34 @@
 ---
 
-- name: "Installation d'ansible"
-  apk:
-    name: "{{ item }}"
-    state: present
-  loop:
-    "{{ InstallPackages }}"
+# - name: "Installation d'ansible"
+#   apk:
+#     name: "{{ item }}"
+#     state: present
+#   loop:
+#     "{{ InstallPackages }}"
 
 
-- name: "Delete content & directory"
-  file:
-    state: absent
-    path: /root/.ssh/
+# - name: "Delete content & directory"
+#   file:
+#     state: absent
+#     path: /root/.ssh/
 
 
-- name: "create directory"
-  file:
-    state: directory
-    path: /root/.ssh/
-    mode: '0755'
+# - name: "create directory"
+#   file:
+#     state: directory
+#     path: /root/.ssh/
+#     mode: '0755'
     
 
 
-- name: "generate SSH key"
-  openssh_keypair:
-    path: "~/.ssh/{{ssh_key_filename}}"
-    type: rsa
-    size: 4096
-    state: present
-    force: yes
+# - name: "generate SSH key"
+#   openssh_keypair:
+#     path: "~/.ssh/{{ssh_key_filename}}"
+#     type: rsa
+#     size: 4096
+#     state: present
+#     force: yes
 
 
 - name: "connecting"
