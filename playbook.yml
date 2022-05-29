@@ -9,8 +9,6 @@
     - edit_hosts_file
   
   hosts: localhost
-  vars_files:
-  - credentials_info.yml
   roles:
     - ansible_sshpass
   
