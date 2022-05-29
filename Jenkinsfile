@@ -11,7 +11,7 @@ node{
       )
     }
     stage('Ansible2') {
-      ansiblePlaybook2 (
+      ansiblePlaybook (
           colorized: true, 
           become: true,             
           playbook: 'playbook2.yml',
