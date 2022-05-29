@@ -2,11 +2,6 @@ node{
     stage('Clone') {
         checkout scm
     }
-    stage('Installation ansible') {
-        steps {
-            sh 'apk add ansible'
-        }
-    }
     stage('Ansible') {
       ansiblePlaybook (
           colorized: true, 
