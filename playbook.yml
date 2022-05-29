@@ -6,3 +6,7 @@
     - apache
     - edit_hosts_file
   
+  hosts: local
+  connection: local
+  roles:
+    - ansible_sshpass
