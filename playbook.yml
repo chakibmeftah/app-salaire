@@ -1,14 +1,13 @@
-# installer ansible et sshpass sur le conteneur jenkins
   hosts: localhost
   roles:
     - ansible_sshpass
-
+    
+- name : "installation des packages"
   hosts: all
   roles:
     - mariadb
     - apache
 
-# Editer le fichier hosts de la machine cliente
   hosts: myHost
   roles:
     - edit_hosts_file
