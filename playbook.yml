@@ -4,12 +4,9 @@
     - mariadb
     - apache
 
+# Editer le fichier hosts de la machine cliente
   hosts: myHost
   roles:
     - edit_hosts_file
-  
-  hosts: localhost
-  roles:
-    - ansible_sshpass
-  
+
   

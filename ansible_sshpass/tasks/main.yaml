@@ -33,6 +33,6 @@
 
 - name: "hello"
   shell: 
-    cmd: sshpass -p "{{ item }}" ssh-copy-id -o stricthostkeychecking=no {{ item }}@{{ item }}
+    cmd: "{{ item }}"
   loop: 
-    - "{{ creds }}"
+    "{{ creds }}"

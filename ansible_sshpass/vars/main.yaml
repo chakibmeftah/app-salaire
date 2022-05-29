@@ -17,15 +17,8 @@ ssh_key_filename: id_rsa
 
 
 creds: 
-  sshMdp1: vagrant
-  sshUser1: root
-  destHost1: 192.168.59.150
-
-  
-creds:
-  sshMdp2: vagrant
-  sshUser2: root
-  destHost2: 192.168.59.101
+  - sshpass -p "vagrant" ssh-copy-id -o stricthostkeychecking=no root@192.168.59.101
+  - sshpass -p "vagrant" ssh-copy-id -o stricthostkeychecking=no root@192.168.59.101
 
 
 # creds: 
