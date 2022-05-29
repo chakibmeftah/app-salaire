@@ -15,8 +15,8 @@ ssh_key_filename: id_rsa
 
 
 creds: 
-  - sshpass -p "vagrant" ssh-copy-id -o stricthostkeychecking=no root@192.168.59.101
-  - sshpass -p "vagrant" ssh-copy-id -o stricthostkeychecking=no root@192.168.59.150
+  - sshpass -p "client" ssh-copy-id -o stricthostkeychecking=no root@192.168.59.107
+  - sshpass -p "server" ssh-copy-id -o stricthostkeychecking=no root@192.168.59.140
 
 
 
