@@ -1,6 +1,6 @@
 
 - name: installation des packages
-  hosts: all
+  hosts: server
   roles:
     - mariadb
     - apache
@@ -9,6 +9,3 @@
   roles:
     - edit_hosts_file
   
-  hosts: myLocalHost
-  roles:
-    - ansible_sshpass
