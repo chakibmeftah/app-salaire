@@ -2,7 +2,6 @@
 
 # Nom des paquets à installer
 InstallPackages:
-  - ansible
   - sshpass
 
 
