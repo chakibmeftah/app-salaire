@@ -13,19 +13,21 @@ ssh_key_filename: id_rsa
 
 # les variables utilisées par sshpass pour se connecter aux hosts 
 
-destHosts:
+sshpasscredentials:
+  destHosts:
   - 192.168.59.150
   - 192.168.59.101
+  
+  sshMdp:
+    - vagrant
+    - vagrant  
+
+
+  sshUser:
+    - root
+    - root
+
 
 # sshUser: root
 
 # sshMdp: vagrant
-
-sshMdp:
-  - vagrant
-  - vagrant  
-
-
-sshUser:
-  - root
-  - root
