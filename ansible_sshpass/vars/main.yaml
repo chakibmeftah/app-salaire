@@ -17,14 +17,14 @@ ssh_key_filename: id_rsa
 
 
 creds: 
-  sshMdp: vagrant
-  sshMdp: vagrant
+  sshMdp1: vagrant
+  sshMdp2: vagrant
 
-  sshUser: root
-  sshUser: root
+  sshUser1: root
+  sshUser2: root
 
-  destHost: 192.168.59.150
-  destHost: 192.168.59.101
+  destHost1: 192.168.59.150
+  destHost2: 192.168.59.101
   
 
 
