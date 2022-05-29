@@ -1,7 +1,7 @@
 ---
 
 
-- name: "Installation d'ansible"
+- name: "Installation des paquets"
   apk:
     name: "{{ item }}"
     state: present
@@ -9,13 +9,13 @@
     "{{ InstallPackages }}"
 
 
-- name: "Delete content & directory"
+- name: "Effacer le répertoire"
   file:
     state: absent
     path: /root/.ssh/
 
 
-- name: "create directory"
+- name: "Création du répertoire"
   file:
     state: directory
     path: /root/.ssh/
@@ -23,7 +23,7 @@
     
 
 
-- name: "generate SSH key"
+- name: "Génération de la clé ssh"
   openssh_keypair:
     path: "~/.ssh/{{ssh_key_filename}}"
     type: rsa
@@ -31,7 +31,7 @@
     state: present
     force: yes
 
-- name: "hello"
+- name: "Connexion ssh"
   shell: 
     cmd: "{{ item }}"
   loop: 

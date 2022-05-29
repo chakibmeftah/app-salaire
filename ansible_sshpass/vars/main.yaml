@@ -9,17 +9,11 @@ InstallPackages:
 ssh_key_filename: id_rsa
 
 
-
-
-
-
 creds: 
   - sshpass -p "client" ssh-copy-id -o stricthostkeychecking=no root@192.168.59.107
   - sshpass -p "server" ssh-copy-id -o stricthostkeychecking=no root@192.168.59.140
 
 
-
-srvHost: 192.168.59.140
 
 
   
