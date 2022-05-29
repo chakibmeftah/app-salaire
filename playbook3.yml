@@ -1,0 +1,6 @@
+
+- name: "Editer le fichier hosts du client"
+  hosts: clientHost
+  roles:
+    - edit_hosts_file
+  
